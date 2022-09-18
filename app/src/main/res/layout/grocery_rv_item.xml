@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:backgroundTint="@color/white"
-    app:cardCornerRadius="3dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/gray_300"
+    app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/idtvitemname"
+            android:id="@+id/item_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/idtvquantity"
+            android:id="@+id/item_quantity_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -35,23 +35,23 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toEndOf="@+id/idtvitemname"
+            app:layout_constraintStart_toEndOf="@+id/item_name_text"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/idtvrate"
+            android:id="@+id/item_rate_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:padding="4dp"
             android:text="@string/rate"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/idivdelete"
-            app:layout_constraintStart_toEndOf="@+id/idtvquantity"
+            app:layout_constraintEnd_toStartOf="@+id/delete_img"
+            app:layout_constraintStart_toEndOf="@+id/item_quantity_text"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/idivdelete"
+            android:id="@+id/delete_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -61,24 +61,24 @@
             android:src="@drawable/ic_baseline_delete_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/blue_light" />
+            app:tint="@color/blue_700" />
 
         <TextView
-            android:id="@+id/idtvheading"
+            android:id="@+id/total_cost_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_marginBottom="4dp"
-            android:layout_toStartOf="@id/idtvtotalamount"
+            android:layout_toStartOf="@id/total_amount_text"
             android:padding="4dp"
             android:text="@string/total_cost"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idtvitemname" />
+            app:layout_constraintTop_toBottomOf="@+id/item_name_text" />
 
         <TextView
-            android:id="@+id/idtvtotalamount"
+            android:id="@+id/total_amount_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -88,7 +88,7 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idivdelete" />
+            app:layout_constraintTop_toBottomOf="@+id/delete_img" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
         list = ArrayList()
         groceryRVAdapter = GroceryRVAdapter(list, this)
 
-        binding.rvitems.layoutManager = LinearLayoutManager(this)
-        binding.rvitems.adapter = groceryRVAdapter
+        binding.rvItems.layoutManager = LinearLayoutManager(this)
+        binding.rvItems.adapter = groceryRVAdapter
 
         val groceryRepository = GroceryRepository(GroceryDatabase(this))
         val factory = GroceryViewModelFactory(groceryRepository)
@@ -64,8 +64,8 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
                 dialog.dismiss()
             } else {
 
-                Toast.makeText(dialog.context,
-//                    applicationContext,
+                Toast.makeText(
+                    dialog.context,
                     "Please fill all details properly",
                     Toast.LENGTH_SHORT
                 ).show()

@@ -13,11 +13,11 @@ class GroceryRVAdapter(
 ) : RecyclerView.Adapter<GroceryRVAdapter.GroceryViewHolder>() {
 
     inner class GroceryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTV: TextView = itemView.findViewById(R.id.idtvitemname)
-        val quantityTV: TextView = itemView.findViewById(R.id.idtvquantity)
-        val rateTV: TextView = itemView.findViewById(R.id.idtvrate)
-        val totalTV: TextView = itemView.findViewById(R.id.idtvtotalamount)
-        val deleteIV: ImageView = itemView.findViewById(R.id.idivdelete)
+        val nameTV: TextView = itemView.findViewById(R.id.item_name_text)
+        val quantityTV: TextView = itemView.findViewById(R.id.item_quantity_text)
+        val rateTV: TextView = itemView.findViewById(R.id.item_rate_text)
+        val totalTV: TextView = itemView.findViewById(R.id.total_amount_text)
+        val deleteIV: ImageView = itemView.findViewById(R.id.delete_img)
     }
 
     interface GroceryItemClickInterface {
