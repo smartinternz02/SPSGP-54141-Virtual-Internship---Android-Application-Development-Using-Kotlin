@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.text.NumberFormat
 
 class GroceryRVAdapter(
     var list: List<GroceryItems>,
@@ -31,14 +32,16 @@ class GroceryRVAdapter(
     }
 
     override fun onBindViewHolder(holder: GroceryViewHolder, position: Int) {
-        holder.nameTV.text = list[position].itemName
-        holder.quantityTV.text = list[position].itemQuantity.toString()
-        holder.rateTV.text = "₹: " + list[position].itemPrice.toString()
-        val itemTotal: Double = list[position].itemQuantity * list[position].itemPrice
-        holder.totalTV.text = "₹: " + itemTotal.toString()
-        holder.deleteIV.setOnClickListener {
-            groceryItemClickInterface.onItemClick(list[position])
+        holder.apply {
+            nameTV.text = list[position].itemName
+            quantityTV.text = "x${list[position].itemQuantity}"
+            rateTV.text = NumberFormat.getCurrencyInstance().format(list[position].itemPrice)
+            val itemTotal: Double = list[position].itemQuantity * list[position].itemPrice
+            totalTV.text = NumberFormat.getCurrencyInstance().format(itemTotal)
+            deleteIV.setOnClickListener {
+                groceryItemClickInterface.onItemClick(list[position])
 
+            }
         }
     }
 

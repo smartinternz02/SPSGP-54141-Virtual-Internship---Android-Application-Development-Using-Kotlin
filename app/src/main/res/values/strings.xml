@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Grocery App</string>
-    <string name="grocery_reminder">Grocery Reminder</string>
-    <string name="total">Total:</string>
     <string name="add_item">Add item</string>
     <string name="item_name">Item Name</string>
     <string name="quantity">Quantity</string>
@@ -15,5 +13,4 @@
     <string name="enter_item_quantity_in_kg">Enter item Quantity in kg</string>
     <string name="enter_item_name">Enter item Name</string>
     <string name="add_item_to_list">Add Item To List</string>
-    <string name="rate_currency">₹: %s</string>
 </resources>
