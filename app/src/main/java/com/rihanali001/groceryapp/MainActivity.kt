@@ -75,8 +75,9 @@ class MainActivity : AppCompatActivity(), GroceryRVAdapter.GroceryItemClickInter
     }
 
     override fun onItemClick(groceryItems: GroceryItems) {
+        val name = groceryItems.itemName
         groceryViewModel.delete(groceryItems)
         groceryRVAdapter.notifyDataSetChanged()
-        Toast.makeText(applicationContext, "Item Deleted Successfully.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, "$name Item Deleted Successfully.", Toast.LENGTH_SHORT).show()
     }
 }
